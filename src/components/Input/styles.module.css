@@ -5,11 +5,23 @@
   font-size: 1.8rem;
   outline: none;
   border: none;
-  border-bottom: 2px solid var(--primary-dark);
+  border-bottom: 0.2rem solid var(--primary-dark);
   padding: 0.8rem 1.6rem;
   transition: border-color 150ms ease-in-out;
 
   &:focus {
     border-color: var(--primary);
+  }
+
+  &:disabled {
+    pointer-events: none;
+    color: var(--gray-500);
+    border-color: var(--gray-500);
+    opacity: 0.5;
+  }
+
+  &::placeholder {
+    color: var(--gray-500);
+    font-size: 1.8rem;
   }
 }
