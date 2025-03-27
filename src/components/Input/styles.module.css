@@ -1,0 +1,15 @@
+.input {
+  max-width: 24rem;
+  background-color: transparent;
+  color: var(--text-default);
+  font-size: 1.8rem;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--primary-dark);
+  padding: 0.8rem 1.6rem;
+  transition: border-color 150ms ease-in-out;
+
+  &:focus {
+    border-color: var(--primary);
+  }
+}
