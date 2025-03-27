@@ -1,4 +1,4 @@
-import { Container } from './components';
+import { Container, Logo } from './components';
 
 import './styles/globals.css';
 import './styles/theme.css';
@@ -7,7 +7,7 @@ const App = () => {
   return (
     <main>
       <Container>
-        <h1>App</h1>
+        <Logo />
       </Container>
     </main>
   );

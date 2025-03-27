@@ -1,0 +1,22 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 3.2rem;
+  text-decoration: none;
+  font-size: 4.2rem;
+  font-weight: bold;
+  color: var(--primary);
+  transition: filter 150ms ease-in-out;
+
+  &:hover {
+    filter: brightness(80%);
+  }
+}
+
+svg {
+  width: 6.4rem;
+  height: 6.4rem;
+}
