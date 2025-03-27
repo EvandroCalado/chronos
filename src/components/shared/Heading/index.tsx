@@ -1,6 +1,6 @@
 import { ComponentProps } from 'react';
 
-import styles from './heading.module.css';
+import styles from './styles.module.css';
 
 type HeadingProps = ComponentProps<'h1'>;
 
