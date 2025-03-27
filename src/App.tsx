@@ -1,4 +1,4 @@
-import { Container } from './components/shared';
+import { Container } from './components';
 
 import './styles/globals.css';
 import './styles/theme.css';
