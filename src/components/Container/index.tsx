@@ -6,8 +6,8 @@ type ContainerProps = ComponentProps<'section'>;
 
 export const Container = ({ children, ...props }: ContainerProps) => {
   return (
-    <section className={styles.container} {...props}>
+    <main className={styles.container} {...props}>
       {children}
-    </section>
+    </main>
   );
 };
