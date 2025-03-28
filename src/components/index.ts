@@ -2,6 +2,7 @@ export * from './Button';
 export * from './Container';
 export * from './Count';
 export * from './cycles';
+export * from './Footer';
 export * from './Heading';
 export * from './Input';
 export * from './Label';
