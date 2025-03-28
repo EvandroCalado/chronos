@@ -1,16 +1,10 @@
-import { Count, TaskForm } from './components';
-import { MainTemplate } from './templates';
+import { HomePage } from './pages';
 
 import './styles/globals.css';
 import './styles/theme.css';
 
 const App = () => {
-  return (
-    <MainTemplate>
-      <Count />
-      <TaskForm />
-    </MainTemplate>
-  );
+  return <HomePage />;
 };
 
 export default App;
