@@ -1,0 +1,19 @@
+.taskForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  .taskFormInput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  button {
+    margin: 2.4rem 0;
+  }
+}
