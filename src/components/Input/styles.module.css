@@ -5,12 +5,12 @@
   font-size: 1.8rem;
   outline: none;
   border: none;
-  border-bottom: 0.2rem solid var(--primary-dark);
+  border-bottom: 0.2rem solid var(--primary);
   padding: 0.8rem 1.6rem;
   transition: border-color 150ms ease-in-out;
 
   &:focus {
-    border-color: var(--primary);
+    border-color: var(--primary-light);
   }
 
   &:disabled {
