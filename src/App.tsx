@@ -1,15 +1,15 @@
 import { Count, TaskForm } from './components';
-import { Main } from './templates';
+import { MainTemplate } from './templates';
 
 import './styles/globals.css';
 import './styles/theme.css';
 
 const App = () => {
   return (
-    <Main>
+    <MainTemplate>
       <Count />
       <TaskForm />
-    </Main>
+    </MainTemplate>
   );
 };
 

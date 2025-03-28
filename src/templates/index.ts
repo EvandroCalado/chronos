@@ -1,2 +1,2 @@
-export * from './Generic';
-export * from './Main';
+export * from './GenericTemplate';
+export * from './MainTemplate';

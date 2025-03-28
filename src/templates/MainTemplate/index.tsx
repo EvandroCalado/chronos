@@ -4,7 +4,7 @@ type MainProps = {
   children: React.ReactNode;
 };
 
-export const Main = ({ children }: MainProps) => {
+export const MainTemplate = ({ children }: MainProps) => {
   return (
     <Container>
       <Logo />

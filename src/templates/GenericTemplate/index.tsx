@@ -4,7 +4,7 @@ type GenericProps = {
   children: React.ReactNode;
 };
 
-export const Generic = ({ children }: GenericProps) => {
+export const GenericTemplate = ({ children }: GenericProps) => {
   return (
     <Container>
       <GenericHtml>{children}</GenericHtml>
