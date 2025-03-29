@@ -3,6 +3,7 @@
   background-color: transparent;
   color: var(--text-default);
   font-size: 1.8rem;
+  text-align: center;
   outline: none;
   border: none;
   border-bottom: 0.2rem solid var(--primary);
@@ -17,7 +18,7 @@
     pointer-events: none;
     color: var(--gray-500);
     border-color: var(--gray-500);
-    opacity: 0.5;
+    opacity: 0.4;
   }
 
   &::placeholder {

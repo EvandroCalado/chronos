@@ -13,22 +13,12 @@
   cursor: pointer;
   transition: filter 150ms ease-in-out;
 
-  &.primary {
-    background-color: var(--primary);
-    color: var(--text-over-primary);
-  }
-
-  &.destructive {
-    background-color: var(--error);
-    color: var(--text-over-error);
-  }
-
   &:hover {
     filter: brightness(80%);
   }
 
   &:active {
-    background-color: var(--primary-light);
+    filter: brightness(120%);
   }
 
   &:disabled {
@@ -41,4 +31,14 @@
     width: 3.2rem;
     height: 3.2rem;
   }
+}
+
+.primary {
+  background-color: var(--primary);
+  color: var(--text-over-primary);
+}
+
+.destructive {
+  background-color: var(--error);
+  color: var(--text-over-error);
 }
