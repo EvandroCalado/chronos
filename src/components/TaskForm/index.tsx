@@ -2,6 +2,7 @@ import { useRef } from 'react';
 
 import { PlayCircleIcon, StopCircleIcon } from 'lucide-react';
 
+import { toastifyAdapter } from '../../adapters';
 import { TaskActionTypes } from '../../contexts';
 import { useTaskContext } from '../../contexts/TaskContext/useTaskContext';
 import { TaskModel } from '../../models/TaskModel';
@@ -24,11 +25,16 @@ export const TaskForm = () => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
+    toastifyAdapter.dismiss();
+
     if (taskName.current === null) return;
 
     const taskNameValue = taskName.current.value.trim();
 
-    if (!taskNameValue) return;
+    if (!taskNameValue) {
+      toastifyAdapter.warning('Por favor, insira uma tarefa');
+      return;
+    }
 
     const newTask: TaskModel = {
       id: String(Date.now()),
@@ -41,10 +47,16 @@ export const TaskForm = () => {
     };
 
     dispatch({ type: TaskActionTypes.START_TASK, payload: newTask });
+
+    toastifyAdapter.success('Tarefa iniciada');
   };
 
   const handleStopTask = () => {
+    toastifyAdapter.dismiss();
+
     dispatch({ type: TaskActionTypes.INTERRUPT_TASK });
+
+    toastifyAdapter.error('Tarefa interrompida');
   };
 
   return (

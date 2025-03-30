@@ -1,3 +1,4 @@
+import { ToastifyContainer } from './components';
 import { TaskContextProvider } from './contexts';
 import { HomePage } from './pages';
 
@@ -7,7 +8,9 @@ import './styles/theme.css';
 const App = () => {
   return (
     <TaskContextProvider>
-      <HomePage />
+      <ToastifyContainer>
+        <HomePage />
+      </ToastifyContainer>
     </TaskContextProvider>
   );
 };
