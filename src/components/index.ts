@@ -10,3 +10,4 @@ export * from './Label';
 export * from './Logo';
 export * from './Menu';
 export * from './TaskForm';
+export * from './Tips';

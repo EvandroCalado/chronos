@@ -10,6 +10,7 @@ import { Button } from '../Button';
 import { Cycles } from '../cycles';
 import { Input } from '../Input';
 import { Label } from '../Label';
+import { Tips } from '../Tips';
 
 import styles from './styles.module.css';
 
@@ -58,7 +59,7 @@ export const TaskForm = () => {
         />
       </div>
 
-      <p>Próximo ciclo é de 25min</p>
+      <Tips />
 
       <Cycles />
 
