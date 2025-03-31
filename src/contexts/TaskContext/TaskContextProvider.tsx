@@ -1,5 +1,6 @@
 import { useEffect, useReducer, useRef } from 'react';
 
+import { TaskStateModel } from '../../models/TaskStateModel';
 import { loadBeep } from '../../utils';
 import { TimerWorkerManager } from '../../workers';
 import { initialTaskState } from './initialTaskState';
@@ -12,7 +13,20 @@ type TaskContextProviderProps = {
 };
 
 export const TaskContextProvider = ({ children }: TaskContextProviderProps) => {
-  const [state, dispatch] = useReducer(taskReducer, initialTaskState);
+  const [state, dispatch] = useReducer(taskReducer, initialTaskState, () => {
+    const storedState = localStorage.getItem('state');
+    if (storedState === null) return initialTaskState;
+
+    const parsedStoredState = JSON.parse(storedState) as TaskStateModel;
+
+    return {
+      ...parsedStoredState,
+      activeTask: null,
+      secondsRemaining: 0,
+      formattedSecondsRemaining: '00:00',
+    };
+  });
+
   const payBeepRef = useRef<ReturnType<typeof loadBeep> | null>(null);
 
   const worker = TimerWorkerManager.getInstance();
@@ -39,6 +53,8 @@ export const TaskContextProvider = ({ children }: TaskContextProviderProps) => {
   });
 
   useEffect(() => {
+    localStorage.setItem('state', JSON.stringify(state));
+
     if (!state.activeTask) {
       worker.terminate();
     }
