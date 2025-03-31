@@ -7,6 +7,7 @@ import {
   SettingsIcon,
   SunIcon,
 } from 'lucide-react';
+import { Link } from 'react-router';
 
 import styles from './styles.module.css';
 
@@ -15,7 +16,7 @@ const links = [
     id: 1,
     name: 'Home',
     icon: HomeIcon,
-    href: '#',
+    href: '/',
   },
   {
     id: 2,
@@ -56,14 +57,14 @@ export const Menu = () => {
   return (
     <nav className={styles.menu}>
       {links.map(link => (
-        <a
+        <Link
           key={link.id}
-          href={link.href}
+          to={link.href}
           aria-label={link.name}
           title={link.name}
         >
           <link.icon />
-        </a>
+        </Link>
       ))}
 
       <button aria-label='Tema' title='Tema' onClick={handleTheme}>
