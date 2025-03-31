@@ -1,0 +1,46 @@
+.history {
+  h1 {
+    margin: 0 auto;
+    padding-bottom: 2.4rem;
+  }
+
+  button {
+    width: max-content;
+    height: max-content;
+    padding: 1rem;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+.historyTable {
+  overflow-x: auto;
+  border-radius: 0.8rem;
+  border: 0.2rem solid var(--gray-700);
+  border-bottom: none;
+
+  table {
+    width: 100%;
+    min-width: 64rem;
+    font-size: 1.6rem;
+    border-collapse: collapse;
+  }
+
+  th {
+    background-color: var(--gray-600);
+  }
+
+  td {
+    background-color: var(--gray-800);
+  }
+
+  th,
+  td {
+    border-bottom: 0.2rem solid var(--gray-700);
+    text-align: left;
+    padding: 1.6rem;
+  }
+}
