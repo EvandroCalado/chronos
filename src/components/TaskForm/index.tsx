@@ -21,6 +21,7 @@ export const TaskForm = () => {
 
   const nextCycle = getNextCycle(state.currentCycle);
   const nextCycleType = getNextCycleType(nextCycle);
+  const lastTaskName = state.tasks[state.tasks.length - 1]?.name;
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -66,6 +67,7 @@ export const TaskForm = () => {
         <Input
           type='text'
           placeholder='Adicione uma nova tarefa'
+          defaultValue={lastTaskName}
           ref={taskName}
           disabled={!!state.activeTask}
         />
