@@ -7,7 +7,8 @@ import {
   SettingsIcon,
   SunIcon,
 } from 'lucide-react';
-import { Link } from 'react-router';
+
+import { RouterLink } from '../RouterLink';
 
 import styles from './styles.module.css';
 
@@ -22,13 +23,13 @@ const links = [
     id: 2,
     name: 'Histórico',
     icon: HistoryIcon,
-    href: '#',
+    href: '/history',
   },
   {
     id: 3,
     name: 'Configurações',
     icon: SettingsIcon,
-    href: '#',
+    href: '/settings',
   },
 ];
 
@@ -57,14 +58,14 @@ export const Menu = () => {
   return (
     <nav className={styles.menu}>
       {links.map(link => (
-        <Link
+        <RouterLink
           key={link.id}
-          to={link.href}
+          href={link.href}
           aria-label={link.name}
           title={link.name}
         >
           <link.icon />
-        </Link>
+        </RouterLink>
       ))}
 
       <button aria-label='Tema' title='Tema' onClick={handleTheme}>

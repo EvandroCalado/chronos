@@ -1,6 +1,4 @@
-import { Link } from 'react-router';
-
-import { Container, GenericHtml, Heading } from '../../components';
+import { Container, GenericHtml, Heading, RouterLink } from '../../components';
 
 export const NotFoundPage = () => {
   return (
@@ -23,10 +21,10 @@ export const NotFoundPage = () => {
           </p>
           <p>
             Mas calma, você não está perdido no espaço (ainda). Dá pra voltar em
-            segurança para a <Link to='/'>página principal</Link> ou{' '}
-            <Link to='/history/'>para o histórico</Link> — ou pode ficar por
-            aqui e fingir que achou uma página secreta que só os exploradores
-            mais legais conseguem acessar.
+            segurança para a <RouterLink href='/'>página principal</RouterLink>{' '}
+            ou <RouterLink href='/history/'>para o histórico</RouterLink> — ou
+            pode ficar por aqui e fingir que achou uma página secreta que só os
+            exploradores mais legais conseguem acessar.
           </p>
           <p>
             Se você acha que essa página deveria existir (ou se quiser bater um
