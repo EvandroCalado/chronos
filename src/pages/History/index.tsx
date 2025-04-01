@@ -76,6 +76,12 @@ export const HistoryPage = () => {
     setConfirmCleanHistory(false);
   }, [confirmCleanHistory, dispatch]);
 
+  useEffect(() => {
+    return () => {
+      toastifyAdapter.dismiss();
+    };
+  }, []);
+
   return (
     <MainTemplate>
       <div className={styles.history}>
