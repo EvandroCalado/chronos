@@ -77,6 +77,8 @@ export const HistoryPage = () => {
   }, [confirmCleanHistory, dispatch]);
 
   useEffect(() => {
+    document.title = 'Histórico - Chronos';
+
     return () => {
       toastifyAdapter.dismiss();
     };

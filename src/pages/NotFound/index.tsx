@@ -1,6 +1,12 @@
+import { useEffect } from 'react';
+
 import { Container, GenericHtml, Heading, RouterLink } from '../../components';
 
 export const NotFoundPage = () => {
+  useEffect(() => {
+    document.title = 'Pagina nao encontrada - Chronos';
+  }, []);
+
   return (
     <Container>
       <GenericHtml>
