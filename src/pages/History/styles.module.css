@@ -1,4 +1,8 @@
 .history {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
   h1 {
     margin: 0 auto;
     padding-bottom: 2.4rem;
@@ -43,4 +47,28 @@
     text-align: left;
     padding: 1.6rem;
   }
+
+  .sort {
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+      filter: brightness(80%);
+    }
+
+    svg {
+      padding-top: 0.5rem;
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+}
+
+.noTasks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  font-weight: bold;
+  color: var(--text-muted);
 }

@@ -2,6 +2,7 @@ export * from './Button';
 export * from './Container';
 export * from './Count';
 export * from './cycles';
+export * from './Dialog';
 export * from './Footer';
 export * from './GenericHtml';
 export * from './Heading';
