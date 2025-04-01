@@ -63,8 +63,9 @@ export const TaskForm = () => {
   return (
     <form className={styles.taskForm} onSubmit={handleSubmit}>
       <div className={styles.taskFormInput}>
-        <Label>Tarefa</Label>
+        <Label htmlFor='task'>Tarefa</Label>
         <Input
+          id='task'
           type='text'
           placeholder='Adicione uma nova tarefa'
           defaultValue={lastTaskName}

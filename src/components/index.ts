@@ -11,6 +11,7 @@ export * from './Label';
 export * from './Logo';
 export * from './Menu';
 export * from './RouterLink';
+export * from './SettingsForm';
 export * from './TaskForm';
 export * from './Tips';
 export * from './ToastifyContainer';

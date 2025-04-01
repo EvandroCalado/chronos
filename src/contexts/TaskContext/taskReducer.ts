@@ -34,6 +34,15 @@ export const taskReducer = (
       };
     }
 
+    case TaskActionTypes.CHANGE_SETTINGS: {
+      const newConfigs = action.payload;
+
+      return {
+        ...state,
+        config: newConfigs,
+      };
+    }
+
     case TaskActionTypes.INTERRUPT_TASK: {
       return {
         ...state,
